@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hudson Talent | Recrutement & sourcing de talents en France</title>
-  <meta name="description" content="Hudson Talent accompagne les entreprises dans le recrutement et le sourcing de profils en industrie, construction, commerce, restauration, hôtellerie, boulangerie, aide à la personne et santé.">
-  <link rel="canonical" href="https://talent.hudson-ltd.com/">
+  <title>Hudson Talent | Recruitment & sourcing of talent in France</title>
+  <meta name="description" content="Hudson Talent helps companies recruit and source profiles in industry, construction, retail, hospitality, healthcare, and more.">
+  <link rel="canonical" href="https://talent.hudson-ltd.com/english.html">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
@@ -14,9 +14,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
-    /* ---------- RESET & VARIABLES (charte Hudson) ---------- */
+    /* ---------- MÊME STYLE QUE LA VERSION FRANÇAISE (copier-coller) ---------- */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
       --ink:       #0c1a2e;
       --ink-mid:   #1a3154;
@@ -35,22 +34,11 @@
       --sh-sm:     0 2px 10px rgba(12,26,46,0.06);
       --sh-md:     0 8px 30px rgba(12,26,46,0.10);
     }
-
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--page);
-      color: var(--t-main);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-    }
-
+    body { font-family: 'DM Sans', sans-serif; background: var(--page); color: var(--t-main); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
     .wrap { max-width: 1140px; margin: 0 auto; padding: 0 48px; }
     @media (max-width: 720px) { .wrap { padding: 0 22px; } }
-
     .tag {
       display: inline-flex; align-items: center; gap: 9px;
       font-family: 'DM Mono', monospace; font-size: 10.5px;
@@ -60,15 +48,12 @@
     .tag::before { content: ''; width: 22px; height: 1px; background: var(--red); }
     .tag.light { color: rgba(255,255,255,0.38); }
     .tag.light::before { background: rgba(255,255,255,0.22); }
-
     h2 {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(40px, 4vw, 66px);
       letter-spacing: 0.025em; line-height: 0.96; color: var(--ink);
     }
     h2.on-dark { color: var(--white); }
-
-    /* ---------- BOUTONS ---------- */
     .btn-p {
       background: var(--red); color: var(--white);
       padding: 15px 30px; font-size: 13px; font-weight: 500;
@@ -77,7 +62,6 @@
       border: none; cursor: pointer;
     }
     .btn-p:hover { background: #a10f23; transform: translateY(-1px); }
-
     .btn-s {
       background: transparent; color: var(--ink);
       padding: 15px 26px; font-size: 13px; font-weight: 400;
@@ -87,8 +71,6 @@
       align-items: center; gap: 10px;
     }
     .btn-s:hover { border-color: var(--ink); color: var(--ink); }
-
-    /* ---------- HEADER ---------- */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 60;
       background: rgba(246,245,242,0.93);
@@ -100,7 +82,6 @@
       height: 62px; display: flex; align-items: center; justify-content: space-between;
     }
     @media (max-width: 720px) { .nav-in { padding: 0 22px; } }
-
     .logo {
       font-family: 'Bebas Neue', sans-serif;
       font-size: 24px;
@@ -114,7 +95,6 @@
     .logo img { height: 36px; width: auto; display: block; }
     .logo-hudson { color: var(--ink); }
     .logo-talent { color: var(--red); }
-
     .nav-links {
       display: flex; gap: 30px; list-style: none; align-items: center;
     }
@@ -129,7 +109,6 @@
       letter-spacing: 0.07em; transition: background .2s !important;
     }
     .nav-cta:hover { background: var(--ink-mid) !important; }
-
     .lang-switch {
       display: flex; gap: 4px;
       font-family: 'DM Mono', monospace; font-size: 11px;
@@ -142,13 +121,10 @@
     }
     .lang-switch a:hover { background: var(--border); color: var(--ink); }
     .lang-switch a.active { background: var(--ink); color: var(--white); }
-
     @media (max-width: 860px) {
       .nav-links { display: none; }
       .lang-switch { display: none; }
     }
-
-    /* ---------- HERO AVEC BANNIÈRE EN GRAND ---------- */
     .hero {
       padding: 144px 0 92px;
       position: relative;
@@ -180,7 +156,6 @@
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; padding: 0 22px; gap: 40px; }
     }
-
     .h-label {
       font-family: 'DM Mono', monospace; font-size: 10px;
       letter-spacing: 0.2em; text-transform: uppercase;
@@ -204,7 +179,6 @@
       margin-bottom: 32px; letter-spacing: 0.02em;
     }
     .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-
     .hero-right {
       color: rgba(255,255,255,0.2);
       font-size: 14px;
@@ -217,8 +191,6 @@
       font-size: 28px;
       color: rgba(255,255,255,0.15);
     }
-
-    /* ---------- SECTIONS ---------- */
     .entreprises { padding: 96px 0; background: var(--page); border-bottom: 1px solid var(--border); }
     .ent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
     @media (max-width: 720px) { .ent-grid { grid-template-columns: 1fr; gap: 40px; } }
@@ -231,7 +203,6 @@
     .ent-card:hover { border-color: var(--red); box-shadow: var(--sh-sm); }
     .ent-card h4 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.02em; }
     .ent-card p { font-size: 13.5px; color: var(--t-mid); line-height: 1.6; }
-
     .secteurs { padding: 96px 0; background: var(--page-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     .sect-grid {
       display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;
@@ -248,7 +219,6 @@
     .sect-card ul { list-style: none; }
     .sect-card ul li { font-size: 13px; color: var(--t-mid); padding: 3px 0; border-bottom: 1px solid var(--border); }
     .sect-card ul li:last-child { border-bottom: none; }
-
     .methode { padding: 96px 0; background: var(--page); border-bottom: 1px solid var(--border); }
     .methode-steps {
       display: flex; flex-wrap: wrap; gap: 24px 12px;
@@ -262,7 +232,6 @@
     .m-step .num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--red); letter-spacing: 0.1em; }
     .m-step h4 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--ink); margin: 8px 0 4px; }
     .m-step p { font-size: 13px; color: var(--t-mid); line-height: 1.5; }
-
     .reseau {
       padding: 80px 0; background: var(--page-alt);
       border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
@@ -278,8 +247,6 @@
       background: var(--white); padding: 8px 24px; border-radius: 60px;
       border: 1px solid var(--border);
     }
-
-    /* Section candidats sans formulaire, avec image */
     .candidats {
       padding: 80px 0;
       background: var(--page);
@@ -301,7 +268,6 @@
       border: 1px solid var(--border);
       display: block;
     }
-
     .cta-entreprise {
       padding: 80px 0; background: var(--ink);
       border-top: 1px solid rgba(255,255,255,0.06);
@@ -310,7 +276,6 @@
     .cta-entreprise h2 { color: var(--white); margin-bottom: 16px; }
     .cta-entreprise p { color: rgba(255,255,255,0.6); font-size: 17px; max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
     .cta-entreprise .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
     .form-entreprise {
       padding: 80px 0; background: var(--page-alt);
       border-top: 1px solid var(--border);
@@ -332,8 +297,6 @@
       border-color: var(--ink); outline: none; background: var(--white);
     }
     .form-entreprise .btn-p { width: 100%; text-align: center; }
-
-    /* ---------- FOOTER ---------- */
     footer {
       background: var(--ink); color: rgba(255,255,255,0.3); padding: 64px 0 42px;
       border-top: 1px solid rgba(255,255,255,0.06);
@@ -363,7 +326,6 @@
     .foot-lang a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 4px; }
     .foot-lang a:hover { color: var(--white); }
     .foot-lang .active { color: var(--white); }
-
     @media (max-width: 480px) {
       .wrap { padding: 0 16px; }
       .hero-grid { padding: 0 16px; }
@@ -377,7 +339,6 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-  <!-- HEADER -->
   <nav>
     <div class="nav-in">
       <a href="index.html" class="logo">
@@ -386,287 +347,279 @@
         <span class="logo-talent">Talent</span>
       </a>
       <ul class="nav-links">
-        <li><a href="#entreprises">Entreprises</a></li>
-        <li><a href="#secteurs">Secteurs</a></li>
-        <li><a href="#methode">Notre approche</a></li>
-        <li><a href="#candidats">Candidats</a></li>
-        <li><a href="#contact-entreprise" class="nav-cta">Nous confier un recrutement →</a></li>
+        <li><a href="#entreprises">Companies</a></li>
+        <li><a href="#secteurs">Sectors</a></li>
+        <li><a href="#methode">Our approach</a></li>
+        <li><a href="#candidats">Candidates</a></li>
+        <li><a href="#contact-entreprise" class="nav-cta">Outsource your recruitment →</a></li>
       </ul>
       <div class="lang-switch">
-        <a href="index.html" class="active">FR</a>
-        <a href="english.html">EN</a>
+        <a href="index.html">FR</a>
+        <a href="english.html" class="active">EN</a>
         <a href="espanol.html">ES</a>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <div class="hero-grid">
         <div>
           <div class="h-label">Hudson Talent</div>
-          <h1>Les talents dont <em>votre entreprise</em> a besoin.</h1>
-          <p class="hero-sub"><strong>Hudson Talent</strong> accompagne les entreprises dans la recherche, la sélection et le recrutement de profils opérationnels, partout en France.</p>
-          <p class="hero-extra">Nous mobilisons des ressources locales et nationales pour identifier rapidement des candidats disponibles et adaptés aux besoins de votre activité.</p>
+          <h1>The talent <em>your business</em> needs.</h1>
+          <p class="hero-sub"><strong>Hudson Talent</strong> helps companies find, select and recruit operational profiles across France.</p>
+          <p class="hero-extra">We mobilise local and national resources to quickly identify candidates who are available and suited to your business needs.</p>
           <div class="hero-btns">
-            <a href="#contact-entreprise" class="btn-p">Confier un recrutement →</a>
-            <a href="#methode" class="btn-s" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.8);">Découvrir notre approche</a>
+            <a href="#contact-entreprise" class="btn-p">Outsource recruitment →</a>
+            <a href="#methode" class="btn-s" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.8);">Discover our approach</a>
           </div>
           <div style="margin-top:24px; font-size:12px; color:rgba(255,255,255,0.3); letter-spacing:0.08em;">
-            Recrutement · Sourcing · Présélection · Mise en relation
+            Recruitment · Sourcing · Pre‑screening · Matching
           </div>
         </div>
         <div class="hero-right">
-          <span>Métiers en tension</span>
-          Industrie · Construction · Commerce · Hôtellerie · Santé
+          <span>High‑demand roles</span>
+          Industry · Construction · Retail · Hospitality · Healthcare
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION ENTREPRISES -->
   <section class="entreprises" id="entreprises">
     <div class="wrap">
-      <span class="tag">Pour les entreprises</span>
+      <span class="tag">For companies</span>
       <div class="ent-grid">
         <div>
-          <h2>Recruter plus vite sur les métiers difficiles à pourvoir.</h2>
+          <h2>Recruit faster for hard‑to‑fill roles.</h2>
           <p style="font-size:16px; color:var(--t-mid); margin-top:12px; line-height:1.7;">
-            Hudson Talent intervient en soutien des entreprises confrontées à des besoins de recrutement récurrents, urgents ou difficiles à couvrir.
+            Hudson Talent supports companies facing recurring, urgent or difficult recruitment needs.
           </p>
           <p style="font-size:16px; color:var(--t-mid); line-height:1.7;">
-            Nous recherchons et présélectionnons les candidats afin de permettre aux entreprises de concentrer leur temps sur les profils réellement pertinents.
+            We search and pre‑screen candidates so you can focus on the most relevant profiles.
           </p>
         </div>
         <div class="ent-cards">
           <div class="ent-card">
-            <h4>Identification</h4>
-            <p>Compréhension du poste, de l'environnement de travail et des critères prioritaires.</p>
+            <h4>Needs identification</h4>
+            <p>Understanding the role, work environment and key criteria.</p>
           </div>
           <div class="ent-card">
             <h4>Sourcing</h4>
-            <p>Recherche active de candidats à travers nos ressources locales et nationales.</p>
+            <p>Active candidate search using our local and national resources.</p>
           </div>
           <div class="ent-card">
-            <h4>Présélection</h4>
-            <p>Premier échange, validation des motivations, disponibilités et adéquation avec le poste.</p>
+            <h4>Pre‑screening</h4>
+            <p>Initial interview, motivation, availability and job fit.</p>
           </div>
           <div class="ent-card">
-            <h4>Mise en relation</h4>
-            <p>Transmission des profils retenus et organisation des premiers échanges avec l'entreprise.</p>
+            <h4>Matching</h4>
+            <p>Shortlisted profiles and coordination of first meetings with the company.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION SECTEURS -->
   <section class="secteurs" id="secteurs">
     <div class="wrap">
-      <span class="tag">Nos secteurs</span>
-      <h2>Des recrutements au plus près des réalités du terrain.</h2>
+      <span class="tag">Our sectors</span>
+      <h2>Recruitment that understands the field.</h2>
       <div class="sect-grid">
         <div class="sect-card">
-          <h4>Industrie</h4>
+          <h4>Industry</h4>
           <ul>
             <li>Production</li>
             <li>Maintenance</li>
-            <li>Logistique</li>
-            <li>Opérateurs</li>
-            <li>Techniciens</li>
-            <li>Conducteurs de ligne</li>
+            <li>Logistics</li>
+            <li>Operators</li>
+            <li>Technicians</li>
+            <li>Line operators</li>
           </ul>
         </div>
         <div class="sect-card">
           <h4>Construction</h4>
           <ul>
-            <li>Bâtiment</li>
-            <li>Second œuvre</li>
-            <li>Travaux publics</li>
-            <li>Maintenance technique</li>
-            <li>Chefs d'équipe</li>
+            <li>Building</li>
+            <li>Finishing trades</li>
+            <li>Public works</li>
+            <li>Technical maintenance</li>
+            <li>Team leaders</li>
           </ul>
         </div>
         <div class="sect-card">
-          <h4>Commerce</h4>
+          <h4>Retail</h4>
           <ul>
-            <li>Vente</li>
-            <li>Grande distribution</li>
-            <li>Commerce de proximité</li>
-            <li>Responsables de rayon</li>
-            <li>Employés polyvalents</li>
+            <li>Sales</li>
+            <li>Supermarkets</li>
+            <li>Local shops</li>
+            <li>Department managers</li>
+            <li>Multiskilled staff</li>
           </ul>
         </div>
         <div class="sect-card">
           <h4>Restaurants</h4>
           <ul>
-            <li>Cuisine</li>
+            <li>Kitchen</li>
             <li>Service</li>
-            <li>Plonge</li>
-            <li>Employés polyvalents</li>
+            <li>Dishwashing</li>
+            <li>Multiskilled staff</li>
             <li>Management</li>
           </ul>
         </div>
         <div class="sect-card">
-          <h4>Hôtels</h4>
+          <h4>Hotels</h4>
           <ul>
-            <li>Réception</li>
+            <li>Reception</li>
             <li>Housekeeping</li>
             <li>Service</li>
-            <li>Cuisine</li>
+            <li>Kitchen</li>
             <li>Maintenance</li>
           </ul>
         </div>
         <div class="sect-card">
-          <h4>Boulangerie</h4>
+          <h4>Bakery</h4>
           <ul>
-            <li>Boulangers</li>
-            <li>Pâtissiers</li>
-            <li>Touriers</li>
-            <li>Vendeurs</li>
-            <li>Préparateurs</li>
+            <li>Bakers</li>
+            <li>Pastry chefs</li>
+            <li>Dough mixers</li>
+            <li>Sales assistants</li>
+            <li>Preparers</li>
           </ul>
         </div>
         <div class="sect-card">
-          <h4>Aide à la personne</h4>
+          <h4>Personal care</h4>
           <ul>
-            <li>Auxiliaires de vie</li>
-            <li>Aides à domicile</li>
-            <li>Accompagnement</li>
-            <li>Services à la personne</li>
+            <li>Care assistants</li>
+            <li>Home helps</li>
+            <li>Support workers</li>
+            <li>Personal services</li>
           </ul>
         </div>
         <div class="sect-card">
-          <h4>Médical & Santé</h4>
+          <h4>Medical & Healthcare</h4>
           <ul>
-            <li>Personnel médical et paramédical</li>
-            <li>Structures de soins</li>
-            <li>Établissements de santé</li>
-            <li>Services spécialisés</li>
+            <li>Medical and paramedical staff</li>
+            <li>Care facilities</li>
+            <li>Health establishments</li>
+            <li>Specialised services</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION MÉTHODE -->
   <section class="methode" id="methode">
     <div class="wrap">
-      <span class="tag">Notre approche</span>
-      <h2>Du besoin au candidat.</h2>
+      <span class="tag">Our approach</span>
+      <h2>From requirement to candidate.</h2>
       <div class="methode-steps">
         <div class="m-step">
-          <div class="num">01 — Besoin</div>
-          <h4>Définition</h4>
-          <p>Nous définissons avec l'entreprise le profil recherché.</p>
+          <div class="num">01 — Requirement</div>
+          <h4>Definition</h4>
+          <p>We define the ideal profile with the company.</p>
         </div>
         <div class="m-step">
-          <div class="num">02 — Recherche</div>
+          <div class="num">02 — Research</div>
           <h4>Sourcing</h4>
-          <p>Nous activons nos ressources locales et nationales.</p>
+          <p>We activate our local and national resources.</p>
         </div>
         <div class="m-step">
-          <div class="num">03 — Qualification</div>
-          <h4>Échange</h4>
-          <p>Nous échangeons avec les candidats et validons les principaux critères.</p>
+          <div class="num">03 — Screening</div>
+          <h4>Assessment</h4>
+          <p>We interview candidates and validate key criteria.</p>
         </div>
         <div class="m-step">
-          <div class="num">04 — Présentation</div>
-          <h4>Sélection</h4>
-          <p>L'entreprise reçoit une sélection de profils pertinents.</p>
+          <div class="num">04 — Presentation</div>
+          <h4>Selection</h4>
+          <p>The company receives a shortlist of relevant profiles.</p>
         </div>
         <div class="m-step">
-          <div class="num">05 — Recrutement</div>
+          <div class="num">05 — Recruitment</div>
           <h4>Finalisation</h4>
-          <p>Nous accompagnons la mise en relation jusqu'à la finalisation du recrutement.</p>
+          <p>We support the matching process through to hiring.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION RÉSEAU -->
   <section class="reseau">
     <div class="wrap">
       <div class="reseau-grid">
         <div>
-          <span class="tag">Notre réseau</span>
-          <h2>Une capacité de recherche locale et nationale.</h2>
+          <span class="tag">Our network</span>
+          <h2>Local and national search capability.</h2>
           <p style="font-size:16px; color:var(--t-mid); line-height:1.7; margin-top:12px;">
-            Hudson Talent s'appuie sur un réseau de partenaires, de recruteurs et de ressources de sourcing permettant d'élargir rapidement la recherche au-delà des canaux de recrutement traditionnels.
+            Hudson Talent leverages a network of partners, recruiters and sourcing resources to quickly expand search beyond traditional channels.
           </p>
           <p style="font-size:16px; color:var(--t-mid); line-height:1.7;">
-            Notre organisation nous permet d'adapter la recherche au secteur, au territoire et au niveau de tension du poste.
+            Our organisation enables us to tailor the search by sector, region and level of difficulty.
           </p>
         </div>
         <div>
           <div class="reseau-mots">
             <span>Local</span>
             <span>National</span>
-            <span>Sectoriel</span>
-            <span>Réactif</span>
+            <span>Sector‑based</span>
+            <span>Responsive</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION CANDIDATS (sans formulaire, avec image) -->
   <section class="candidats" id="candidats">
     <div class="wrap">
-      <span class="tag">Candidats</span>
+      <span class="tag">Candidates</span>
       <div class="cand-grid">
         <div>
-          <h2>Vous recherchez une nouvelle opportunité ?</h2>
+          <h2>Looking for a new opportunity?</h2>
           <p style="font-size:16px; color:var(--t-mid); line-height:1.7; margin:12px 0 24px;">
-            Hudson Talent met régulièrement en relation des candidats avec des entreprises qui recrutent dans différents secteurs d'activité.
+            Hudson Talent regularly connects candidates with companies hiring in various sectors.
           </p>
-          <a href="#secteurs" class="btn-p">Voir les métiers recherchés →</a>
+          <a href="#secteurs" class="btn-p">View roles we recruit for →</a>
         </div>
         <div>
-          <img src="candidat.png" alt="Candidats" class="cand-image">
+          <img src="candidat.png" alt="Candidates" class="cand-image">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GROS CTA ENTREPRISE -->
   <section class="cta-entreprise" id="contact-entreprise">
     <div class="wrap">
-      <h2>Vous avez des postes à pourvoir ?</h2>
-      <p>Présentez-nous votre besoin. Notre équipe étudie votre recherche et vous indique rapidement les solutions de sourcing mobilisables.</p>
+      <h2>Have positions to fill?</h2>
+      <p>Tell us about your needs. Our team will analyse your requirements and quickly outline the sourcing solutions available.</p>
       <div class="btns">
-        <a href="#form-entreprise" class="btn-p">Parler de mon recrutement →</a>
-        <a href="#form-entreprise" class="btn-s" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.8);">Être rappelé</a>
+        <a href="#form-entreprise" class="btn-p">Discuss my recruitment →</a>
+        <a href="#form-entreprise" class="btn-s" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.8);">Request a call‑back</a>
       </div>
     </div>
   </section>
 
-  <!-- FORMULAIRE ENTREPRISE -->
   <section class="form-entreprise" id="form-entreprise">
     <div class="wrap">
-      <span class="tag">Demande de recrutement</span>
-      <h2 style="margin-bottom:24px;">Confiez-nous votre besoin</h2>
+      <span class="tag">Recruitment request</span>
+      <h2 style="margin-bottom:24px;">Tell us about your need</h2>
       <form action="mailto:cyril.ragonet@gmail.com" method="POST" enctype="text/plain">
         <div class="form-row">
           <div>
-            <label>Entreprise *</label>
-            <input type="text" name="Entreprise" required>
+            <label>Company *</label>
+            <input type="text" name="Company" required>
           </div>
           <div>
-            <label>Nom / Prénom *</label>
-            <input type="text" name="Nom_Prénom" required>
+            <label>Full name *</label>
+            <input type="text" name="Full_name" required>
           </div>
         </div>
         <div class="form-row">
           <div>
-            <label>Fonction</label>
-            <input type="text" name="Fonction">
+            <label>Job title</label>
+            <input type="text" name="Job_title">
           </div>
           <div>
-            <label>Téléphone *</label>
-            <input type="tel" name="Téléphone" required>
+            <label>Phone *</label>
+            <input type="tel" name="Phone" required>
           </div>
         </div>
         <div class="form-row">
@@ -675,50 +628,49 @@
             <input type="email" name="Email" required>
           </div>
           <div>
-            <label>Ville / Département</label>
-            <input type="text" name="Ville_Département">
+            <label>City / Department</label>
+            <input type="text" name="City_Department">
           </div>
         </div>
         <div class="form-row">
           <div>
-            <label>Secteur d'activité</label>
-            <select name="Secteur_activité">
-              <option value="">Choisir</option>
-              <option>Industrie</option>
+            <label>Sector</label>
+            <select name="Sector">
+              <option value="">Select</option>
+              <option>Industry</option>
               <option>Construction</option>
-              <option>Commerce</option>
-              <option>Restauration</option>
-              <option>Hôtellerie</option>
-              <option>Boulangerie</option>
-              <option>Aide à la personne</option>
-              <option>Médical & Santé</option>
+              <option>Retail</option>
+              <option>Restaurants</option>
+              <option>Hotels</option>
+              <option>Bakery</option>
+              <option>Personal care</option>
+              <option>Medical & Healthcare</option>
             </select>
           </div>
           <div>
-            <label>Poste recherché *</label>
-            <input type="text" name="Poste" required>
+            <label>Position sought *</label>
+            <input type="text" name="Position" required>
           </div>
         </div>
         <div class="form-row">
           <div>
-            <label>Nombre de personnes recherchées *</label>
-            <input type="text" name="Nombre" required>
+            <label>Number of people required *</label>
+            <input type="text" name="Number" required>
           </div>
           <div>
-            <label>Date souhaitée de prise de poste</label>
-            <input type="text" name="Date_souhaitée" placeholder="ex: immédiate, dans 2 mois...">
+            <label>Desired start date</label>
+            <input type="text" name="Start_date" placeholder="e.g. immediate, in 2 months...">
           </div>
         </div>
         <div style="margin-bottom:16px;">
           <label>Message</label>
           <textarea name="Message" rows="4" style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:4px; font-family:inherit; background:var(--page);"></textarea>
         </div>
-        <button type="submit" class="btn-p" style="width:100%;">Envoyer ma demande</button>
+        <button type="submit" class="btn-p" style="width:100%;">Send my request</button>
       </form>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="wrap">
       <div class="foot-main">
@@ -727,18 +679,18 @@
             hudson<span style="color:var(--red);">.</span>
             <span class="sub">TALENT</span>
           </div>
-          <div class="foot-about">Une expertise Hudson · Recrutement · Sourcing · Solutions RH</div>
+          <div class="foot-about">A Hudson expertise · Recruitment · Sourcing · HR Solutions</div>
         </div>
         <div class="foot-col">
-          <div class="foot-title">Liens</div>
-          <div class="foot-text"><a href="#entreprises" style="color:rgba(255,255,255,0.45); text-decoration:none;">Entreprises</a></div>
-          <div class="foot-text"><a href="#candidats" style="color:rgba(255,255,255,0.45); text-decoration:none;">Candidats</a></div>
-          <div class="foot-text"><a href="#secteurs" style="color:rgba(255,255,255,0.45); text-decoration:none;">Secteurs</a></div>
+          <div class="foot-title">Links</div>
+          <div class="foot-text"><a href="#entreprises" style="color:rgba(255,255,255,0.45); text-decoration:none;">Companies</a></div>
+          <div class="foot-text"><a href="#candidats" style="color:rgba(255,255,255,0.45); text-decoration:none;">Candidates</a></div>
+          <div class="foot-text"><a href="#secteurs" style="color:rgba(255,255,255,0.45); text-decoration:none;">Sectors</a></div>
           <div class="foot-text"><a href="#contact-entreprise" style="color:rgba(255,255,255,0.45); text-decoration:none;">Contact</a></div>
         </div>
         <div class="foot-col">
-          <div class="foot-title">Légal</div>
-          <div class="foot-text"><a href="https://hudson-ltd.com/mentions-legales" style="color:rgba(255,255,255,0.45); text-decoration:none;">Mentions légales</a></div>
+          <div class="foot-title">Legal</div>
+          <div class="foot-text"><a href="https://hudson-ltd.com/mentions-legales" style="color:rgba(255,255,255,0.45); text-decoration:none;">Legal notice</a></div>
         </div>
         <div class="foot-col">
           <div class="foot-title">Hudson</div>
@@ -748,11 +700,11 @@
         </div>
       </div>
       <div class="foot-bottom">
-        <span>© 2026 Hudson Talent — Tous droits réservés</span>
+        <span>© 2026 Hudson Talent — All rights reserved</span>
         <span>
           <span class="foot-lang">
-            <a href="index.html" class="active">FR</a> |
-            <a href="english.html">EN</a> |
+            <a href="index.html">FR</a> |
+            <a href="english.html" class="active">EN</a> |
             <a href="espanol.html">ES</a>
           </span>
         </span>
@@ -760,15 +712,14 @@
     </div>
   </footer>
 
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Hudson Talent",
-    "url": "https://talent.hudson-ltd.com/",
+    "url": "https://talent.hudson-ltd.com/english.html",
     "logo": "https://hudson-ltd.com/icon.png",
-    "description": "Recrutement et sourcing de talents en France pour les métiers en tension.",
+    "description": "Recruitment and sourcing of talent in France for hard-to-fill roles.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "France"
