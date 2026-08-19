@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hudson Talent | Recrutement & sourcing de talents en France</title>
+  <meta name="description" content="Hudson Talent accompagne les entreprises dans le recrutement et le sourcing de profils en industrie, construction, commerce, restauration, hôtellerie, boulangerie, aide à la personne et santé.">
+  <link rel="canonical" href="https://talent.hudson-ltd.com/">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-5PF6FCCW');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Polices Hudson -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    /* ---------- RESET & VARIABLES (charte Hudson) ---------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:       #0c1a2e;
+      --ink-mid:   #1a3154;
+      --ink-light: #274d82;
+      --page:      #f6f5f2;
+      --page-alt:  #edecea;
+      --white:     #ffffff;
+      --red:       #bf1129;
+      --red-soft:  rgba(191,17,41,0.08);
+      --t-main:    #0c1a2e;
+      --t-mid:     #3b5070;
+      --t-muted:   #788fa8;
+      --t-faint:   #adbdcc;
+      --border:    rgba(12,26,46,0.10);
+      --border-md: rgba(12,26,46,0.16);
+      --sh-sm:     0 2px 10px rgba(12,26,46,0.06);
+      --sh-md:     0 8px 30px rgba(12,26,46,0.10);
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--page);
+      color: var(--t-main);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+
+    .wrap { max-width: 1140px; margin: 0 auto; padding: 0 48px; }
+    @media (max-width: 720px) { .wrap { padding: 0 22px; } }
+
+    .tag {
+      display: inline-flex; align-items: center; gap: 9px;
+      font-family: 'DM Mono', monospace; font-size: 10.5px;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--red);
+      margin-bottom: 16px;
+    }
+    .tag::before { content: ''; width: 22px; height: 1px; background: var(--red); }
+    .tag.light { color: rgba(255,255,255,0.38); }
+    .tag.light::before { background: rgba(255,255,255,0.22); }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 4vw, 66px);
+      letter-spacing: 0.025em; line-height: 0.96; color: var(--ink);
+    }
+    h2.on-dark { color: var(--white); }
+
+    /* ---------- BOUTONS ---------- */
+    .btn-p {
+      background: var(--red); color: var(--white);
+      padding: 15px 30px; font-size: 13px; font-weight: 500;
+      letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none;
+      transition: background .2s, transform .15s; display: inline-block;
+      border: none; cursor: pointer;
+    }
+    .btn-p:hover { background: #a10f23; transform: translateY(-1px); }
+
+    .btn-s {
+      background: transparent; color: var(--ink);
+      padding: 15px 26px; font-size: 13px; font-weight: 400;
+      letter-spacing: 0.06em; text-decoration: none;
+      border: 1px solid var(--border-md);
+      transition: border-color .2s, color .2s; display: inline-flex;
+      align-items: center; gap: 10px;
+    }
+    .btn-s:hover { border-color: var(--ink); color: var(--ink); }
+
+    /* ---------- HEADER ---------- */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+      background: rgba(246,245,242,0.93);
+      backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-in {
+      max-width: 1140px; margin: 0 auto; padding: 0 48px;
+      height: 62px; display: flex; align-items: center; justify-content: space-between;
+    }
+    @media (max-width: 720px) { .nav-in { padding: 0 22px; } }
+
+    .logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .logo img { height: 36px; width: auto; display: block; }
+    .logo-hudson { color: var(--ink); }
+    .logo-talent { color: var(--red); }
+
+    .nav-links {
+      display: flex; gap: 30px; list-style: none; align-items: center;
+    }
+    .nav-links a {
+      font-size: 12.5px; color: var(--t-mid); text-decoration: none;
+      transition: color .18s;
+    }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-cta {
+      background: var(--ink); color: var(--white) !important;
+      padding: 10px 20px; font-size: 12.5px !important; font-weight: 500 !important;
+      letter-spacing: 0.07em; transition: background .2s !important;
+    }
+    .nav-cta:hover { background: var(--ink-mid) !important; }
+
+    .lang-switch {
+      display: flex; gap: 4px;
+      font-family: 'DM Mono', monospace; font-size: 11px;
+      color: var(--t-mid);
+    }
+    .lang-switch a {
+      color: var(--t-mid); text-decoration: none;
+      padding: 2px 6px; border-radius: 2px;
+      transition: background .15s, color .15s;
+    }
+    .lang-switch a:hover { background: var(--border); color: var(--ink); }
+    .lang-switch a.active { background: var(--ink); color: var(--white); }
+
+    @media (max-width: 860px) {
+      .nav-links { display: none; }
+      .lang-switch { display: none; }
+    }
+
+    /* ---------- HERO AVEC BANNIÈRE EN GRAND ---------- */
+    .hero {
+      padding: 144px 0 92px;
+      position: relative;
+      background: var(--ink);
+      /* la bannière en fond */
+      background-image: url('talent.png');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(12,26,46,0.75);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+    .hero-grid {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; padding: 0 22px; gap: 40px; }
+    }
+
+    .h-label {
+      font-family: 'DM Mono', monospace; font-size: 10px;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 18px;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(44px, 6vw, 78px);
+      line-height: 0.93; letter-spacing: 0.02em; color: var(--white);
+      margin-bottom: 20px;
+    }
+    .hero h1 em { color: var(--red); font-style: normal; }
+    .hero-sub {
+      font-size: 17px; font-weight: 300; line-height: 1.7;
+      color: rgba(255,255,255,0.65); max-width: 500px; margin-bottom: 16px;
+    }
+    .hero-sub strong { color: rgba(255,255,255,0.92); font-weight: 400; }
+    .hero-extra {
+      font-size: 14px; color: rgba(255,255,255,0.4);
+      margin-bottom: 32px; letter-spacing: 0.02em;
+    }
+    .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .hero-right {
+      /* on peut mettre un petit texte ou rien, la bannière est en fond */
+      color: rgba(255,255,255,0.2);
+      font-size: 14px;
+      text-align: right;
+      letter-spacing: 0.05em;
+    }
+    .hero-right span {
+      display: block;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 28px;
+      color: rgba(255,255,255,0.15);
+    }
+
+    /* ---------- SECTIONS (inchangées) ---------- */
+    .entreprises { padding: 96px 0; background: var(--page); border-bottom: 1px solid var(--border); }
+    .ent-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    @media (max-width: 720px) { .ent-grid { grid-template-columns: 1fr; gap: 40px; } }
+    .ent-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    @media (max-width: 480px) { .ent-cards { grid-template-columns: 1fr; } }
+    .ent-card {
+      background: var(--white); padding: 24px 22px; border-radius: 8px;
+      border: 1px solid var(--border); transition: border .2s, box-shadow .2s;
+    }
+    .ent-card:hover { border-color: var(--red); box-shadow: var(--sh-sm); }
+    .ent-card h4 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--ink); margin-bottom: 6px; letter-spacing: 0.02em; }
+    .ent-card p { font-size: 13.5px; color: var(--t-mid); line-height: 1.6; }
+
+    .secteurs { padding: 96px 0; background: var(--page-alt); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .sect-grid {
+      display: grid; grid-template-columns: repeat(4,1fr); gap: 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 860px) { .sect-grid { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 480px) { .sect-grid { grid-template-columns: 1fr; } }
+    .sect-card {
+      background: var(--white); padding: 24px 20px; border-radius: 8px;
+      border: 1px solid var(--border); transition: border .2s;
+    }
+    .sect-card:hover { border-color: var(--red); }
+    .sect-card h4 { font-family: 'Bebas Neue', sans-serif; font-size: 24px; color: var(--ink); margin-bottom: 8px; }
+    .sect-card ul { list-style: none; }
+    .sect-card ul li { font-size: 13px; color: var(--t-mid); padding: 3px 0; border-bottom: 1px solid var(--border); }
+    .sect-card ul li:last-child { border-bottom: none; }
+
+    .methode { padding: 96px 0; background: var(--page); border-bottom: 1px solid var(--border); }
+    .methode-steps {
+      display: flex; flex-wrap: wrap; gap: 24px 12px;
+      margin-top: 40px;
+    }
+    .m-step {
+      flex: 1 0 160px; background: var(--white); padding: 24px 20px;
+      border-radius: 8px; border: 1px solid var(--border);
+      text-align: center;
+    }
+    .m-step .num { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--red); letter-spacing: 0.1em; }
+    .m-step h4 { font-family: 'Bebas Neue', sans-serif; font-size: 22px; color: var(--ink); margin: 8px 0 4px; }
+    .m-step p { font-size: 13px; color: var(--t-mid); line-height: 1.5; }
+
+    .reseau {
+      padding: 80px 0; background: var(--page-alt);
+      border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);
+    }
+    .reseau-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+    @media (max-width: 720px) { .reseau-grid { grid-template-columns: 1fr; } }
+    .reseau-mots {
+      display: flex; flex-wrap: wrap; gap: 12px 20px;
+      margin-top: 20px;
+    }
+    .reseau-mots span {
+      font-family: 'Bebas Neue', sans-serif; font-size: 32px; color: var(--ink);
+      background: var(--white); padding: 8px 24px; border-radius: 60px;
+      border: 1px solid var(--border);
+    }
+
+    .candidats { padding: 96px 0; background: var(--page); border-bottom: 1px solid var(--border); }
+    .cand-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+    @media (max-width: 720px) { .cand-grid { grid-template-columns: 1fr; } }
+    .cand-form {
+      background: var(--white); padding: 32px; border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .cand-form .form-group { margin-bottom: 14px; }
+    .cand-form label { font-size: 13px; font-weight: 500; color: var(--ink); display: block; margin-bottom: 3px; }
+    .cand-form input, .cand-form select, .cand-form textarea {
+      width: 100%; padding: 10px 12px; border: 1px solid var(--border);
+      border-radius: 4px; font-family: inherit; font-size: 14px;
+      background: var(--page);
+    }
+    .cand-form input:focus, .cand-form select:focus, .cand-form textarea:focus {
+      border-color: var(--ink); outline: none; background: var(--white);
+    }
+    .cand-form .btn-p { width: 100%; text-align: center; }
+
+    .cta-entreprise {
+      padding: 80px 0; background: var(--ink);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .cta-entreprise .wrap { text-align: center; }
+    .cta-entreprise h2 { color: var(--white); margin-bottom: 16px; }
+    .cta-entreprise p { color: rgba(255,255,255,0.6); font-size: 17px; max-width: 600px; margin: 0 auto 32px; line-height: 1.6; }
+    .cta-entreprise .btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+    .form-entreprise {
+      padding: 80px 0; background: var(--page-alt);
+      border-top: 1px solid var(--border);
+    }
+    .form-entreprise .wrap { max-width: 800px; }
+    .form-entreprise form {
+      background: var(--white); padding: 40px 48px; border-radius: 8px;
+      border: 1px solid var(--border);
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 16px; }
+    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
+    .form-entreprise label { font-size: 13px; font-weight: 500; color: var(--ink); display: block; margin-bottom: 3px; }
+    .form-entreprise input, .form-entreprise select, .form-entreprise textarea {
+      width: 100%; padding: 10px 12px; border: 1px solid var(--border);
+      border-radius: 4px; font-family: inherit; font-size: 14px;
+      background: var(--page);
+    }
+    .form-entreprise input:focus, .form-entreprise select:focus, .form-entreprise textarea:focus {
+      border-color: var(--ink); outline: none; background: var(--white);
+    }
+    .form-entreprise .btn-p { width: 100%; text-align: center; }
+
+    /* ---------- FOOTER ---------- */
+    footer {
+      background: var(--ink); color: rgba(255,255,255,0.3); padding: 64px 0 42px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+    .foot-main { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 58px; }
+    @media (max-width: 720px) { .foot-main { grid-template-columns: 1fr; gap: 32px; } }
+    .foot-col:first-child { max-width: 240px; }
+    .foot-logo {
+      font-family: 'Bebas Neue', sans-serif; font-size: 28px; color: var(--white); margin-bottom: 14px; letter-spacing: 0.08em;
+    }
+    .foot-logo .sub { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 400; color: rgba(255,255,255,0.3); margin-left: 8px; }
+    .foot-about { font-size: 13px; color: rgba(255,255,255,0.32); line-height: 1.6; }
+    .foot-title {
+      font-family: 'DM Mono', monospace; font-size: 10px;
+      letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.28);
+      margin-bottom: 22px;
+    }
+    .foot-text { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+    .foot-bottom {
+      padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06);
+      font-size: 12px; color: rgba(255,255,255,0.25);
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 18px;
+    }
+    .foot-bottom a { color: rgba(255,255,255,0.4); text-decoration: none; transition: color .15s; }
+    .foot-bottom a:hover { color: var(--white); }
+    .foot-lang { font-family: 'DM Mono', monospace; font-size: 11px; }
+    .foot-lang a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 4px; }
+    .foot-lang a:hover { color: var(--white); }
+    .foot-lang .active { color: var(--white); }
+
+    @media (max-width: 480px) {
+      .wrap { padding: 0 16px; }
+      .hero-grid { padding: 0 16px; }
+      .nav-in { padding: 0 16px; }
+      .form-entreprise form { padding: 24px 18px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6FCCW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <!-- HEADER -->
+  <nav>
+    <div class="nav-in">
+      <a href="/" class="logo">
+        <img src="icon.png" alt="Hudson icon">
+        <span class="logo-hudson">Hudson</span>
+        <span class="logo-talent">Talent</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#entreprises">Entreprises</a></li>
+        <li><a href="#secteurs">Secteurs</a></li>
+        <li><a href="#methode">Notre approche</a></li>
+        <li><a href="#candidats">Candidats</a></li>
+        <li><a href="#contact-entreprise" class="nav-cta">Nous confier un recrutement →</a></li>
+      </ul>
+      <div class="lang-switch">
+        <a href="#" class="active">FR</a>
+        <a href="#">EN</a>
+        <a href="#">ES</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO AVEC BANNIÈRE EN FOND -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-grid">
+        <div>
+          <div class="h-label">Hudson Talent</div>
+          <h1>Les talents dont <em>votre entreprise</em> a besoin.</h1>
+          <p class="hero-sub"><strong>Hudson Talent</strong> accompagne les entreprises dans la recherche, la sélection et le recrutement de profils opérationnels, partout en France.</p>
+          <p class="hero-extra">Nous mobilisons des ressources locales et nationales pour identifier rapidement des candidats disponibles et adaptés aux besoins de votre activité.</p>
+          <div class="hero-btns">
+            <a href="#contact-entreprise" class="btn-p">Confier un recrutement →</a>
+            <a href="#methode" class="btn-s" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.8);">Découvrir notre approche</a>
+          </div>
+          <div style="margin-top:24px; font-size:12px; color:rgba(255,255,255,0.3); letter-spacing:0.08em;">
+            Recrutement · Sourcing · Présélection · Mise en relation
+          </div>
+        </div>
+        <div class="hero-right">
+          <!-- petit texte décoratif, la bannière est en fond -->
+          <span>Métiers en tension</span>
+          Industrie · Construction · Commerce · Hôtellerie · Santé
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION ENTREPRISES -->
+  <section class="entreprises" id="entreprises">
+    <div class="wrap">
+      <span class="tag">Pour les entreprises</span>
+      <div class="ent-grid">
+        <div>
+          <h2>Recruter plus vite sur les métiers difficiles à pourvoir.</h2>
+          <p style="font-size:16px; color:var(--t-mid); margin-top:12px; line-height:1.7;">
+            Hudson Talent intervient en soutien des entreprises confrontées à des besoins de recrutement récurrents, urgents ou difficiles à couvrir.
+          </p>
+          <p style="font-size:16px; color:var(--t-mid); line-height:1.7;">
+            Nous recherchons et présélectionnons les candidats afin de permettre aux entreprises de concentrer leur temps sur les profils réellement pertinents.
+          </p>
+        </div>
+        <div class="ent-cards">
+          <div class="ent-card">
+            <h4>Identification</h4>
+            <p>Compréhension du poste, de l'environnement de travail et des critères prioritaires.</p>
+          </div>
+          <div class="ent-card">
+            <h4>Sourcing</h4>
+            <p>Recherche active de candidats à travers nos ressources locales et nationales.</p>
+          </div>
+          <div class="ent-card">
+            <h4>Présélection</h4>
+            <p>Premier échange, validation des motivations, disponibilités et adéquation avec le poste.</p>
+          </div>
+          <div class="ent-card">
+            <h4>Mise en relation</h4>
+            <p>Transmission des profils retenus et organisation des premiers échanges avec l'entreprise.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION SECTEURS -->
+  <section class="secteurs" id="secteurs">
+    <div class="wrap">
+      <span class="tag">Nos secteurs</span>
+      <h2>Des recrutements au plus près des réalités du terrain.</h2>
+      <div class="sect-grid">
+        <div class="sect-card">
+          <h4>Industrie</h4>
+          <ul>
+            <li>Production</li>
+            <li>Maintenance</li>
+            <li>Logistique</li>
+            <li>Opérateurs</li>
+            <li>Techniciens</li>
+            <li>Conducteurs de ligne</li>
+          </ul>
+        </div>
+        <div class="sect-card">
+          <h4>Construction</h4>
+          <ul>
+            <li>Bâtiment</li>
+            <li>Second œuvre</li>
+            <li>Travaux publics</li>
+            <li>Maintenance technique</li>
+            <li>Chefs d'équipe</li>
+          </ul>
+        </div>
+        <div class="sect-card">
+          <h4>Commerce</h4>
+          <ul>
+            <li>Vente</li>
+            <li>Grande distribution</li>
+            <li>Commerce de proximité</li>
+            <li>Responsables de rayon</li>
+            <li>Employés polyvalents</li>
+          </ul>
+        </div>
+        <div class="sect-card">
+          <h4>Restaurants</h4>
+          <ul>
+            <li>Cuisine</li>
+            <li>Service</li>
+            <li>Plonge</li>
+            <li>Employés polyvalents</li>
+            <li>Management</li>
+          </ul>
+        </div>
+        <div class="sect-card">
+          <h4>Hôtels</h4>
+          <ul>
+            <li>Réception</li>
+            <li>Housekeeping</li>
+            <li>Service</li>
+            <li>Cuisine</li>
+            <li>Maintenance</li>
+          </ul>
+        </div>
+        <div class="sect-card">
+          <h4>Boulangerie</h4>
+          <ul>
+            <li>Boulangers</li>
+            <li>Pâtissiers</li>
+            <li>Touriers</li>
+            <li>Vendeurs</li>
+            <li>Préparateurs</li>
+          </ul>
+        </div>
+        <div class="sect-card">
+          <h4>Aide à la personne</h4>
+          <ul>
+            <li>Auxiliaires de vie</li>
+            <li>Aides à domicile</li>
+            <li>Accompagnement</li>
+            <li>Services à la personne</li>
+          </ul>
+        </div>
+        <div class="sect-card">
+          <h4>Médical & Santé</h4>
+          <ul>
+            <li>Personnel médical et paramédical</li>
+            <li>Structures de soins</li>
+            <li>Établissements de santé</li>
+            <li>Services spécialisés</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION MÉTHODE -->
+  <section class="methode" id="methode">
+    <div class="wrap">
+      <span class="tag">Notre approche</span>
+      <h2>Du besoin au candidat.</h2>
+      <div class="methode-steps">
+        <div class="m-step">
+          <div class="num">01 — Besoin</div>
+          <h4>Définition</h4>
+          <p>Nous définissons avec l'entreprise le profil recherché.</p>
+        </div>
+        <div class="m-step">
+          <div class="num">02 — Recherche</div>
+          <h4>Sourcing</h4>
+          <p>Nous activons nos ressources locales et nationales.</p>
+        </div>
+        <div class="m-step">
+          <div class="num">03 — Qualification</div>
+          <h4>Échange</h4>
+          <p>Nous échangeons avec les candidats et validons les principaux critères.</p>
+        </div>
+        <div class="m-step">
+          <div class="num">04 — Présentation</div>
+          <h4>Sélection</h4>
+          <p>L'entreprise reçoit une sélection de profils pertinents.</p>
+        </div>
+        <div class="m-step">
+          <div class="num">05 — Recrutement</div>
+          <h4>Finalisation</h4>
+          <p>Nous accompagnons la mise en relation jusqu'à la finalisation du recrutement.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION RÉSEAU -->
+  <section class="reseau">
+    <div class="wrap">
+      <div class="reseau-grid">
+        <div>
+          <span class="tag">Notre réseau</span>
+          <h2>Une capacité de recherche locale et nationale.</h2>
+          <p style="font-size:16px; color:var(--t-mid); line-height:1.7; margin-top:12px;">
+            Hudson Talent s'appuie sur un réseau de partenaires, de recruteurs et de ressources de sourcing permettant d'élargir rapidement la recherche au-delà des canaux de recrutement traditionnels.
+          </p>
+          <p style="font-size:16px; color:var(--t-mid); line-height:1.7;">
+            Notre organisation nous permet d'adapter la recherche au secteur, au territoire et au niveau de tension du poste.
+          </p>
+        </div>
+        <div>
+          <div class="reseau-mots">
+            <span>Local</span>
+            <span>National</span>
+            <span>Sectoriel</span>
+            <span>Réactif</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION CANDIDATS -->
+  <section class="candidats" id="candidats">
+    <div class="wrap">
+      <span class="tag">Candidats</span>
+      <div class="cand-grid">
+        <div>
+          <h2>Vous recherchez une nouvelle opportunité ?</h2>
+          <p style="font-size:16px; color:var(--t-mid); line-height:1.7; margin:12px 0 24px;">
+            Hudson Talent met régulièrement en relation des candidats avec des entreprises qui recrutent dans différents secteurs d'activité.
+          </p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="#candidat-form" class="btn-p">Déposer ma candidature</a>
+            <a href="#secteurs" class="btn-s">Voir les métiers recherchés</a>
+          </div>
+        </div>
+        <div class="cand-form" id="candidat-form">
+          <form action="mailto:cyril.ragonet@gmail.com" method="POST" enctype="text/plain">
+            <div class="form-group">
+              <label>Nom *</label>
+              <input type="text" name="Nom" required>
+            </div>
+            <div class="form-group">
+              <label>Prénom *</label>
+              <input type="text" name="Prénom" required>
+            </div>
+            <div class="form-group">
+              <label>Téléphone *</label>
+              <input type="tel" name="Téléphone" required>
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" name="Email" required>
+            </div>
+            <div class="form-group">
+              <label>Ville</label>
+              <input type="text" name="Ville">
+            </div>
+            <div class="form-group">
+              <label>Métier recherché</label>
+              <input type="text" name="Métier">
+            </div>
+            <div class="form-group">
+              <label>Secteur</label>
+              <select name="Secteur">
+                <option value="">Choisir</option>
+                <option>Industrie</option>
+                <option>Construction</option>
+                <option>Commerce</option>
+                <option>Restauration</option>
+                <option>Hôtellerie</option>
+                <option>Boulangerie</option>
+                <option>Aide à la personne</option>
+                <option>Médical & Santé</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Disponibilité</label>
+              <input type="text" name="Disponibilité" placeholder="ex: immédiate, dans 1 mois...">
+            </div>
+            <div class="form-group">
+              <label>CV (lien ou envoi)</label>
+              <input type="text" name="CV" placeholder="lien Dropbox, Google Drive, ou précisez">
+            </div>
+            <button type="submit" class="btn-p">Envoyer ma candidature</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROS CTA ENTREPRISE -->
+  <section class="cta-entreprise" id="contact-entreprise">
+    <div class="wrap">
+      <h2>Vous avez des postes à pourvoir ?</h2>
+      <p>Présentez-nous votre besoin. Notre équipe étudie votre recherche et vous indique rapidement les solutions de sourcing mobilisables.</p>
+      <div class="btns">
+        <a href="#form-entreprise" class="btn-p">Parler de mon recrutement →</a>
+        <a href="#form-entreprise" class="btn-s" style="border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.8);">Être rappelé</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMULAIRE ENTREPRISE -->
+  <section class="form-entreprise" id="form-entreprise">
+    <div class="wrap">
+      <span class="tag">Demande de recrutement</span>
+      <h2 style="margin-bottom:24px;">Confiez-nous votre besoin</h2>
+      <form action="mailto:cyril.ragonet@gmail.com" method="POST" enctype="text/plain">
+        <div class="form-row">
+          <div>
+            <label>Entreprise *</label>
+            <input type="text" name="Entreprise" required>
+          </div>
+          <div>
+            <label>Nom / Prénom *</label>
+            <input type="text" name="Nom_Prénom" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>Fonction</label>
+            <input type="text" name="Fonction">
+          </div>
+          <div>
+            <label>Téléphone *</label>
+            <input type="tel" name="Téléphone" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>Email *</label>
+            <input type="email" name="Email" required>
+          </div>
+          <div>
+            <label>Ville / Département</label>
+            <input type="text" name="Ville_Département">
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>Secteur d'activité</label>
+            <select name="Secteur_activité">
+              <option value="">Choisir</option>
+              <option>Industrie</option>
+              <option>Construction</option>
+              <option>Commerce</option>
+              <option>Restauration</option>
+              <option>Hôtellerie</option>
+              <option>Boulangerie</option>
+              <option>Aide à la personne</option>
+              <option>Médical & Santé</option>
+            </select>
+          </div>
+          <div>
+            <label>Poste recherché *</label>
+            <input type="text" name="Poste" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label>Nombre de personnes recherchées *</label>
+            <input type="text" name="Nombre" required>
+          </div>
+          <div>
+            <label>Date souhaitée de prise de poste</label>
+            <input type="text" name="Date_souhaitée" placeholder="ex: immédiate, dans 2 mois...">
+          </div>
+        </div>
+        <div style="margin-bottom:16px;">
+          <label>Message</label>
+          <textarea name="Message" rows="4" style="width:100%; padding:10px 12px; border:1px solid var(--border); border-radius:4px; font-family:inherit; background:var(--page);"></textarea>
+        </div>
+        <button type="submit" class="btn-p" style="width:100%;">Envoyer ma demande</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-main">
+        <div class="foot-col">
+          <div class="foot-logo">
+            hudson<span style="color:var(--red);">.</span>
+            <span class="sub">TALENT</span>
+          </div>
+          <div class="foot-about">Une expertise Hudson · Recrutement · Sourcing · Solutions RH</div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Liens</div>
+          <div class="foot-text"><a href="#entreprises" style="color:rgba(255,255,255,0.45); text-decoration:none;">Entreprises</a></div>
+          <div class="foot-text"><a href="#candidats" style="color:rgba(255,255,255,0.45); text-decoration:none;">Candidats</a></div>
+          <div class="foot-text"><a href="#secteurs" style="color:rgba(255,255,255,0.45); text-decoration:none;">Secteurs</a></div>
+          <div class="foot-text"><a href="#contact-entreprise" style="color:rgba(255,255,255,0.45); text-decoration:none;">Contact</a></div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Légal</div>
+          <div class="foot-text"><a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Mentions légales</a></div>
+          <div class="foot-text"><a href="#" style="color:rgba(255,255,255,0.45); text-decoration:none;">Politique de confidentialité</a></div>
+        </div>
+        <div class="foot-col">
+          <div class="foot-title">Hudson</div>
+          <div class="foot-text">Business Development</div>
+          <div class="foot-text">Healthcare</div>
+          <div class="foot-text">Talent</div>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <span>© 2026 Hudson Talent — Tous droits réservés</span>
+        <span>
+          <span class="foot-lang">
+            <a href="#" class="active">FR</a> |
+            <a href="#">EN</a> |
+            <a href="#">ES</a>
+          </span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Hudson Talent",
+    "url": "https://talent.hudson-ltd.com/",
+    "logo": "https://hudson-ltd.com/icon.png",
+    "description": "Recrutement et sourcing de talents en France pour les métiers en tension.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "France"
+    }
+  }
+  </script>
+</body>
+</html>
